@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherMoscow</string>
+    <string name="weather">Weather</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="temperature">Temperature</string>
+    <string name="feels_like">Feels Like</string>
+    <!-- Другие строки -->
+</resources>
