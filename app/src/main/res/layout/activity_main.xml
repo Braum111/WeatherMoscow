@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#5A2424">
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        android:background="@drawable/background">
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
 
 
         <TextView
             android:id="@+id/cityname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/backgroundwidget"
             android:layout_marginStart="100dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="100dp"
+            android:background="@drawable/backgroundwidget"
             android:gravity="center"
             android:text="Moscow today"
             android:textColor="@color/white"
@@ -44,13 +44,13 @@
                 android:id="@+id/temptext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="%%°"
+                android:gravity="center"
+                android:text="  °"
                 android:textColor="@color/white"
                 android:textSize="44dp"
-                android:gravity="center"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- ConstraintLayout для скорости ветра -->
@@ -69,11 +69,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Wind Speed:\n"
-                android:textSize="25dp"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- ConstraintLayout для влажности -->
@@ -92,11 +92,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Humidity:\n"
-                android:textSize="25dp"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- ConstraintLayout для описания погоды -->
@@ -115,11 +115,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Weather:\n"
-                android:textSize="44dp"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="44dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- ConstraintLayout для ощущаемой температуры -->
@@ -138,21 +138,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Feels Like:\n"
-                android:textSize="30dp"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/swipe_refresh_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        <Button
+            android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="100dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="152dp"
+            android:layout_marginEnd="32dp"
+            android:text="B"
+            android:textColorHighlight="#000202"
+            android:textColorLink="#1C4F68"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#1D415C" />
 
-    <!-- Ваши другие view, такие как TextView для отображения погоды, здесь -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Ваши другие view, такие как TextView для отображения погоды, здесь -->
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
