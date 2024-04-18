@@ -19,14 +19,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="100dp"
             android:background="@drawable/backgroundwidget"
             android:gravity="center"
-            android:text="Moscow today"
             android:textColor="@color/white"
             android:textSize="26dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -105,6 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
+            android:maxWidth="350dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/backgroundwidget"
             app:layout_constraintStart_toStartOf="parent"
@@ -114,9 +115,11 @@
                 android:id="@+id/weatherDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:text="Weather:\n"
                 android:textColor="@color/white"
-                android:textSize="44dp"
+                android:textSize="30dp"
+                android:maxWidth="340dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -128,7 +131,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/backgroundwidget"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/weatherDescriptionLayout">
@@ -137,6 +140,7 @@
                 android:id="@+id/feelsLike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Feels Like:\n"
                 android:textColor="@color/white"
                 android:textSize="30dp"
@@ -146,18 +150,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/button"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="100dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="152dp"
-            android:layout_marginEnd="32dp"
-            android:text="B"
-            android:textColorHighlight="#000202"
-            android:textColorLink="#1C4F68"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:strokeColor="#1D415C" />
+            android:id="@+id/citySelectorButton"
+            android:layout_width="113dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="45dp"
+            android:textColor="@color/white"
+            android:background="@drawable/backgroundwidget"
+            android:text="Выбрать город"
+            app:layout_constraintStart_toEndOf="@+id/tempcon"
+            app:layout_constraintTop_toBottomOf="@+id/cityname" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
