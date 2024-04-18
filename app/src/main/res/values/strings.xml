@@ -1,6 +1,8 @@
 <resources>
+    <string name="select_city">select city</string>
+    <string name="error_loading">error loading</string>
     <string name="app_name">WeatherMoscow</string>
-    <string name="weather">Weather</string>
+    <string name="weather" translatable="false">Weather</string>
     <string name="humidity">Humidity</string>
     <string name="wind_speed">Wind Speed</string>
     <string name="temperature">Temperature</string>
