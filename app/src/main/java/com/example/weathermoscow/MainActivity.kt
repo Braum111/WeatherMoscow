@@ -10,6 +10,11 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONException
 
+/**
+ * Главная активность приложения, отображающая текущую погоду в Москве.
+ * Использует API OpenWeather для получения данных и обновляет интерфейс
+ * при помощи свайпа вниз для обновления.
+ */
 class MainActivity : AppCompatActivity() {
     private val site = "https://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=75cda820a8902118f5d797edc6784239"
     private lateinit var temptext: TextView
@@ -20,6 +25,10 @@ class MainActivity : AppCompatActivity() {
     private var mRequestQueue: RequestQueue? = null
     private lateinit var swipeRefreshLayout: SwipeRefreshLayout
 
+    /**
+     * Инициализирует активность, виджеты и начальные запросы данных.
+     * @param savedInstanceState Сохраненное состояние экземпляра, используется для восстановления состояния UI.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,6 +46,9 @@ class MainActivity : AppCompatActivity() {
         getWeather() // Получаем погоду
     }
 
+    /**
+     * Отправляет GET-запрос на OpenWeatherMap API для получения данных о погоде и обновляет UI.
+     */
     private fun getWeather() {
         val jsonObjectRequest = JsonObjectRequest(
             com.android.volley.Request.Method.GET, site, null,
